@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Conciencia Historia</title>
+    
+
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Conciencia Historia</h1>
+        <p>Conocer el pasado para comprender el presente</p>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="categorias.html">Categorías</a>
+            <a href="acerca.html">Acerca de</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="proyecto">
+            <h2>Acerca del proyecto</h2>
+
+            <p>
+                Conciencia Historia es una página web educativa dedicada
+                a recopilar y organizar información sobre los principales
+                acontecimientos, procesos y personajes de la historia de México.
+            </p>
+
+            <p>
+                Su finalidad es ofrecer un espacio
+                accesible donde puedan consultar información histórica
+                de manera organizada y utilizarla como apoyo en sus investigaciones.
+            </p>
+        </section>
+
+        <section id="objetivo">
+            <h2>Objetivo</h2>
+
+            <p>
+                Facilitar el acceso a información sobre la historia de México
+                mediante contenidos divididos por épocas y categorías,
+                promoviendo el aprendizaje y la comprensión de nuestro pasado.
+            </p>
+        </section>
+
+        <section id="importancia">
+            <h2>Importancia de la conciencia histórica</h2>
+
+            <p>
+                La conciencia histórica nos permite analizar los acontecimientos
+                del pasado, comprender sus consecuencias en el presente
+                y reflexionar sobre los cambios que han experimentado
+                las sociedades a lo largo del tiempo.
+            </p>
+
+            <p>
+                Conocer la historia también ayuda a comprender
+                nuestra identidad cultural y la diversidad de experiencias
+                que han contribuido a construir el México actual.
+            </p>
+        </section>
+
+        <section id="contenido">
+            <h2>¿Qué hay en esta página?</h2>
+
+            <ul>
+                <li>Información sobre las principales etapas históricas de México.</li>
+                <li>Datos sobre acontecimientos y personajes relevantes.</li>
+                <li>Explicaciones sobre causas y consecuencias históricas.</li>
+                <li>Recursos para apoyar investigaciones escolares.</li>
+            </ul>
+
+            <p>
+                Los contenidos tienen una finalidad educativa y pueden
+                complementarse con libros y fuentes históricas confiables.
+            </p>
+        </section>
+
+        <section id="navegacion">
+            <h2>Explora la historia</h2>
+
+            <p>
+                Recorre las diferentes categorías
+                y descubre los acontecimientos que marcaron
+                el desarrollo histórico de México.
+            </p>
+
+            <a href="categorias.html">Consultar categorías históricas</a>
+        </section>
+    </main>
+
+
+<section class="seccion-formulario">
+    <h2>Comparte tu opinión</h2>
+
+    <p>
+        Queremos conocer tu experiencia en Conciencia Histórica.
+        Cuéntanos qué aprendiste y qué tema te gustó más.
+    </p>
+
+    <form id="formulario-opinion">
+        <div class="campo-formulario">
+            <label for="nombre">Nombre:</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre">
+        </div>
+
+        <div class="campo-formulario">
+            <label for="tema">¿Cuál fue tu tema favorito?</label>
+            <select id="tema" name="tema" required>
+                <option value="">Selecciona un tema</option>
+                <option value="Civilizaciones mesoamericanas">
+                    Civilizaciones mesoamericanas
+                </option>
+                <option value="Cultura mexica">Cultura mexica</option>
+                <option value="Conquista de México">
+                    Conquista de México
+                </option>
+                <option value="Virreinato de Nueva España">
+                    Virreinato de Nueva España
+                </option>
+                <option value="Inicio de la Independencia">
+                    Inicio de la Independencia
+                </option>
+                <option value="Consumación de la Independencia">
+                    Consumación de la Independencia
+                </option>
+                <option value="Reforma Liberal">Reforma Liberal</option>
+                <option value="Porfiriato">Porfiriato</option>
+                <option value="Revolución Mexicana">
+                    Revolución Mexicana
+                </option>
+                <option value="Constitución de 1917">
+                    Constitución Mexicana de 1917
+                </option>
+            </select>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="aprendizaje">¿Qué aprendiste?</label>
+            <textarea
+                id="aprendizaje"
+                name="aprendizaje"
+                rows="4"
+                placeholder="Escribe lo que aprendiste..."
+                required></textarea>
+        </div>
+
+        <fieldset class="campo-formulario">
+            <legend>¿Cómo calificas la página?</legend>
+
+            <label>
+                <input type="radio" name="calificacion"
+                       value="5" required>
+                Excelente
+            </label>
+
+            <label>
+                <input type="radio" name="calificacion" value="4">
+                Muy buena
+            </label>
+
+            <label>
+                <input type="radio" name="calificacion" value="3">
+                Buena
+            </label>
+
+            <label>
+                <input type="radio" name="calificacion" value="2">
+                Puede mejorar
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar opinión</button>
+
+        <p id="mensaje-formulario" role="status"
+           aria-live="polite"></p>
+    </form>
+</section>
+
+<script>
+document.getElementById("formulario-opinion")
+    .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("mensaje-formulario").textContent =
+            "¡Gracias por compartir tu opinión!";
+
+        this.reset();
+    });
+</script>
+    <footer>
+        <p>Conciencia Historia</p>
+        <a href="index.html">Volver al inicio</a>
+    </footer>
+</body>
+</html>
